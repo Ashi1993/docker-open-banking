@@ -76,9 +76,9 @@ RUN echo ${MOTD} > "${ENV}"
 EXPOSE 9446
 
 # For OpenShift
-USER root
-RUN chgrp -R root /home/wso2carbon/wso2is-* && chmod -R g+rwX /home/wso2carbon/wso2is-*
-USER wso2carbon
+#USER root
+#RUN chgrp -R root /home/wso2carbon/wso2is-* && chmod -R g+rwX /home/wso2carbon/wso2is-*
+#USER wso2carbon
 
 # initiate container and start WSO2 Carbon server
 ENTRYPOINT ["/home/wso2carbon/docker-entrypoint.sh"]
